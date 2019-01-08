@@ -1,0 +1,29 @@
+#app {
+    margin: 20px 50px;
+    display: inline-block;
+}
+#parent {
+    font-size: 0;
+}
+.fluent-col {
+    display: inline-block;
+}
+.fluent-row {
+    padding: 10px;
+    margin: 12px 6px;
+}
+.fluent-col.row .fluent-row {
+    display: inline-block;
+    margin: 0;
+}
+.fluent-col.row {
+    background: #e2e2e2;
+}
+
+.purple .fluent-col {
+    background: #ad00bd;
+}
+.purple .fluent-col .fluent-row {
+    color: white;
+    cursor: pointer;
+}

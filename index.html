@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Fluent</title>
+        <script src="fluent.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="app">
+            <div class="fluent-col">
+                <div class="fluent-row grid">11</div>
+                <div class="fluent-row grid">12</div>
+                <div class="fluent-row grid">13</div>
+                <div class="fluent-row grid">14</div>
+                <div class="fluent-row grid">15</div>
+            </div>
+            <div class="fluent-col">
+                <div class="fluent-row grid">21</div>
+                <div class="fluent-row grid">22</div>
+                <div class="fluent-row grid">23</div>
+                <div class="fluent-row grid">24</div>
+                <div class="fluent-row grid">25</div>
+            </div>
+            <div class="fluent-col">
+                <div class="fluent-row grid">31</div>
+                <div class="fluent-row grid">32</div>
+                <div class="fluent-row grid">33</div>
+                <div class="fluent-row grid">34</div>
+                <div class="fluent-row grid">35</div>
+            </div>
+        </div>
+        <div id="parent" class="purple">
+            <div class="fluent-col row">
+                <div class="fluent-row icons"><span style="font-size: 2.5rem" class="fas fa-bars"></span></div>
+                <div class="fluent-row icons"><span style="font-size: 2.5rem" class="fas fa-home"></span></div>
+                <div class="fluent-row icons"><span style="font-size: 2.5rem" class="fas fa-envelope"></span></div>
+                <div class="fluent-row icons"><span style="font-size: 2.5rem" class="fas fa-user-friends"></span></div>
+                <div class="fluent-row icons"><span style="font-size: 2.5rem" class="fas fa-flask"></span></div>
+            </div>
+            </div>
+        <script>
+            makeFluent(
+                document.getElementById('app'),
+                document.getElementsByClassName('fluent-row grid'),
+                {
+                    borderImageSource: 'radial-gradient(50px at $mouseX $mouseY, black, transparent',
+                },
+                {
+                    highlightBackground: 'radial-gradient(30px circle at $mouseX $mouseY, red, transparent)',
+                    baseBackground: 'white',
+                }
+            );
+            makeFluent(
+                document.getElementById('parent'),
+                document.getElementsByClassName('fluent-row icons'),
+                {
+                    borderImageSource: 'radial-gradient(50px at $mouseX $mouseY, rgb(92, 0, 101), transparent',
+                },
+                {
+                    highlightBackground: 'radial-gradient(30px circle at $mouseX $mouseY, rgb(211, 0, 230), #ad00bd)',
+                    baseBackground: '#ad00bd',
+                }
+            );
+        </script>
+    </body>
+</html>
